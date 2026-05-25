@@ -1,0 +1,111 @@
+[
+  {
+    "ContainingType": "InternshipPortal.API.Controllers.InternshipOpeningsController",
+    "Method": "GetAll",
+    "RelativePath": "api/InternshipOpenings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[InternshipPortal.Application.DTOs.InternshipOpeningDto, InternshipPortal.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InternshipPortal.API.Controllers.InternshipOpeningsController",
+    "Method": "Create",
+    "RelativePath": "api/InternshipOpenings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "InternshipPortal.Application.DTOs.CreateInternshipOpeningRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InternshipPortal.Application.DTOs.InternshipOpeningDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InternshipPortal.API.Controllers.InternshipOpeningsController",
+    "Method": "GetById",
+    "RelativePath": "api/InternshipOpenings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InternshipPortal.Application.DTOs.InternshipOpeningDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InternshipPortal.API.Controllers.InternshipOpeningsController",
+    "Method": "Update",
+    "RelativePath": "api/InternshipOpenings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "InternshipPortal.Application.DTOs.UpdateInternshipOpeningRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternshipPortal.API.Controllers.InternshipOpeningsController",
+    "Method": "Delete",
+    "RelativePath": "api/InternshipOpenings/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

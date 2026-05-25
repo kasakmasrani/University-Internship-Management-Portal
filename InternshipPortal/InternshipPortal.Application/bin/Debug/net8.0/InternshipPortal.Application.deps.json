@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "InternshipPortal.Application/1.0.0": {
+        "dependencies": {
+          "InternshipPortal.Domain": "1.0.0"
+        },
+        "runtime": {
+          "InternshipPortal.Application.dll": {}
+        }
+      },
+      "InternshipPortal.Domain/1.0.0": {
+        "runtime": {
+          "InternshipPortal.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InternshipPortal.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InternshipPortal.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

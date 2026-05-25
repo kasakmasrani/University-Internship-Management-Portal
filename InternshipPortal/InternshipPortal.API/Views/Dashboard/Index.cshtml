@@ -1,0 +1,203 @@
+@model IReadOnlyList<InternshipOpeningDto>
+
+@{
+    ViewData["Title"] = "Dashboard";
+    var appliedInternshipIds = ViewBag.AppliedInternshipIds as HashSet<int> ?? new HashSet<int>();
+    var debarredInternshipIds = ViewBag.DebarredInternshipIds as HashSet<int> ?? new HashSet<int>();
+    var studentStatusByInternship = ViewBag.StudentStatusByInternship as Dictionary<int, string> ?? new Dictionary<int, string>();
+    var applicantUsernamesByInternship = ViewBag.ApplicantUsernamesByInternship as Dictionary<int, List<string>> ?? new Dictionary<int, List<string>>();
+    var applicationCountsByInternship = ViewBag.ApplicationCountsByInternship as Dictionary<int, int> ?? new Dictionary<int, int>();
+    var hiredCountsByInternship = ViewBag.HiredCountsByInternship as Dictionary<int, int> ?? new Dictionary<int, int>();
+    var rejectedCountsByInternship = ViewBag.RejectedCountsByInternship as Dictionary<int, int> ?? new Dictionary<int, int>();
+    var multiCompanyApplicants = ViewBag.MultiCompanyApplicants as List<KeyValuePair<string, int>> ?? new List<KeyValuePair<string, int>>();
+    var topOpeningsByApplications = ViewBag.TopOpeningsByApplications as List<string> ?? new List<string>();
+    var studentsWithoutAnyOffer = ViewBag.StudentsWithoutAnyOffer as List<string> ?? new List<string>();
+}
+
+<section class="hero-card">
+    <div>
+        <p class="eyebrow">Internship Management</p>
+        <h1>Manage openings with a clean demo view.</h1>
+        <p class="hero-copy">This page shows current openings, quick stats, and actions to create, update, and view details.</p>
+    </div>
+    @if (User.IsInRole("Admin") || User.IsInRole("Company"))
+    {
+        <a asp-action="Create" class="button button-primary">Create New</a>
+    }
+</section>
+
+@if (TempData["StatusMessage"] is string message)
+{
+    <div class="alert-success">@message</div>
+}
+
+<section class="stats-grid">
+    <article class="stat-card">
+        <span>Total Openings</span>
+        <strong>@ViewBag.TotalCount</strong>
+    </article>
+    <article class="stat-card">
+        <span>Active Posts</span>
+        <strong>@ViewBag.ActiveCount</strong>
+    </article>
+    <article class="stat-card">
+        <span>Average Stipend</span>
+        <strong>BDT @Convert.ToDecimal(ViewBag.AverageStipend).ToString("0")</strong>
+    </article>
+    @if (User.IsInRole("Admin") || User.IsInRole("Faculty"))
+    {
+        <article class="stat-card">
+            <span>Total Applications</span>
+            <strong>@ViewBag.TotalApplications</strong>
+        </article>
+        <article class="stat-card">
+            <span>Hired Students</span>
+            <strong>@ViewBag.TotalHired</strong>
+        </article>
+        <article class="stat-card">
+            <span>Rejected Students</span>
+            <strong>@ViewBag.TotalRejected</strong>
+        </article>
+        <article class="stat-card">
+            <span>Students Employed</span>
+            <strong>@ViewBag.TotalEmployedStudents</strong>
+        </article>
+    }
+</section>
+
+@if (User.IsInRole("Admin") || User.IsInRole("Faculty"))
+{
+    <section class="table-card">
+        <div class="section-header">
+            <h2>Application Analysis</h2>
+            <p>Cross-company engagement and conversion view</p>
+        </div>
+
+        <div class="analysis-grid">
+            <article class="stat-card">
+                <span>Unique Applicants</span>
+                <strong>@ViewBag.TotalUniqueApplicants</strong>
+            </article>
+            <article class="stat-card">
+                <span>Top Company by Applications</span>
+                <strong>@ViewBag.TopCompanyByApplications</strong>
+            </article>
+        </div>
+
+        <p class="muted-note">
+            Top Openings: @(topOpeningsByApplications.Count == 0 ? "N/A" : string.Join(" | ", topOpeningsByApplications))
+        </p>
+        <p class="muted-note">
+            Multi-Company Applicants: @(multiCompanyApplicants.Count == 0 ? "N/A" : string.Join(", ", multiCompanyApplicants.Select(item => $"{item.Key} ({item.Value})")))
+        </p>
+        <p class="muted-note">
+            Applicants Without Offer Yet: @(studentsWithoutAnyOffer.Count == 0 ? "N/A" : string.Join(", ", studentsWithoutAnyOffer))
+        </p>
+    </section>
+}
+
+<section class="table-card">
+    <div class="section-header">
+        <h2>Openings List</h2>
+        <p>@Model.Count internship posts available</p>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Duration</th>
+                <th>Stipend</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var internship in Model)
+        {
+            <tr>
+                <td>@internship.Title</td>
+                <td>@internship.CompanyName</td>
+                <td>@internship.Location</td>
+                <td>@internship.Duration</td>
+                <td>BDT @internship.Stipend</td>
+                <td>
+                    <span class="status @(internship.IsActive ? "status-active" : "status-closed")">
+                        @(internship.IsActive ? "Active" : "Closed")
+                    </span>
+                </td>
+                <td class="actions-cell">
+                    <a asp-action="Details" asp-route-id="@internship.Id" class="action-link">View</a>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Company"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@internship.Id" class="action-link">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@internship.Id" method="post" class="inline-form">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="button-link">Delete</button>
+                        </form>
+                    }
+                    @if (User.IsInRole("Student") && internship.IsActive)
+                    {
+                        if (debarredInternshipIds.Contains(internship.Id))
+                        {
+                            <span class="status status-closed">Debarred</span>
+                        }
+                        else if (studentStatusByInternship.TryGetValue(internship.Id, out var studentStatus))
+                        {
+                            var statusClass = studentStatus == "Hired"
+                                ? "status-hired"
+                                : studentStatus == "Rejected"
+                                    ? "status-closed"
+                                    : "status-active";
+                            <span class="status @statusClass">@studentStatus</span>
+                        }
+                        else
+                        {
+                            <form asp-action="Apply" asp-route-id="@internship.Id" method="post" class="inline-form">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="button-link">Apply</button>
+                            </form>
+                        }
+                    }
+                    @if (User.IsInRole("Faculty"))
+                    {
+                        <form asp-action="DebarStudent" asp-route-id="@internship.Id" method="post" class="inline-form faculty-action-form">
+                            @Html.AntiForgeryToken()
+                            <input type="text" name="studentUsername" placeholder="student username" class="mini-input" required />
+                            <button type="submit" class="button-link">Debar/Remove</button>
+                        </form>
+                    }
+                    @if (User.IsInRole("Admin") || User.IsInRole("Company"))
+                    {
+                        var applicants = applicantUsernamesByInternship.TryGetValue(internship.Id, out var internshipApplicants)
+                            ? internshipApplicants
+                            : new List<string>();
+                        var applicationCount = applicationCountsByInternship.TryGetValue(internship.Id, out var total) ? total : 0;
+                        var hiredCount = hiredCountsByInternship.TryGetValue(internship.Id, out var hired) ? hired : 0;
+                        var rejectedCount = rejectedCountsByInternship.TryGetValue(internship.Id, out var rejected) ? rejected : 0;
+
+                        <div class="company-tools">
+                            <span class="muted-note">Applicants: @(applicants.Count == 0 ? "None" : string.Join(", ", applicants))</span>
+                            <span class="muted-note">Total: @applicationCount | Hired: @hiredCount | Rejected: @rejectedCount</span>
+
+                            <form asp-action="HireStudent" asp-route-id="@internship.Id" method="post" class="inline-form company-action-form">
+                                @Html.AntiForgeryToken()
+                                <input type="text" name="studentUsername" placeholder="student username" class="mini-input" required />
+                                <button type="submit" class="button-link">Hire</button>
+                            </form>
+
+                            <form asp-action="RejectStudent" asp-route-id="@internship.Id" method="post" class="inline-form company-action-form">
+                                @Html.AntiForgeryToken()
+                                <input type="text" name="studentUsername" placeholder="student username" class="mini-input" required />
+                                <button type="submit" class="button-link">Reject</button>
+                            </form>
+                        </div>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</section>

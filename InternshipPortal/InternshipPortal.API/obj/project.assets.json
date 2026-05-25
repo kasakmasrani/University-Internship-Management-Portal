@@ -1,0 +1,146 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "InternshipPortal.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "InternshipPortal.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InternshipPortal.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InternshipPortal.Application.dll": {}
+        }
+      },
+      "InternshipPortal.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/InternshipPortal.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InternshipPortal.Domain.dll": {}
+        }
+      },
+      "InternshipPortal.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "InternshipPortal.Application": "1.0.0",
+          "InternshipPortal.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InternshipPortal.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InternshipPortal.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InternshipPortal.Application/1.0.0": {
+      "type": "project",
+      "path": "../InternshipPortal.Application/InternshipPortal.Application.csproj",
+      "msbuildProject": "../InternshipPortal.Application/InternshipPortal.Application.csproj"
+    },
+    "InternshipPortal.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InternshipPortal.Domain/InternshipPortal.Domain.csproj",
+      "msbuildProject": "../InternshipPortal.Domain/InternshipPortal.Domain.csproj"
+    },
+    "InternshipPortal.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../InternshipPortal.Infrastructure/InternshipPortal.Infrastructure.csproj",
+      "msbuildProject": "../InternshipPortal.Infrastructure/InternshipPortal.Infrastructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "InternshipPortal.Application >= 1.0.0",
+      "InternshipPortal.Infrastructure >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\PUSHTI\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\InternshipPortal.API.csproj",
+      "projectName": "InternshipPortal.API",
+      "projectPath": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\InternshipPortal.API.csproj",
+      "packagesPath": "C:\\Users\\PUSHTI\\.nuget\\packages\\",
+      "outputPath": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\PUSHTI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Application\\InternshipPortal.Application.csproj": {
+              "projectPath": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Application\\InternshipPortal.Application.csproj"
+            },
+            "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj": {
+              "projectPath": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

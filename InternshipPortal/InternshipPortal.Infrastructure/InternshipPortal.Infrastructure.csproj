@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InternshipPortal.Application\InternshipPortal.Application.csproj" />
+    <ProjectReference Include="..\InternshipPortal.Domain\InternshipPortal.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Identity\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Persistence\" />
+  </ItemGroup>
+
+</Project>

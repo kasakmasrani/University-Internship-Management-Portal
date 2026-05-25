@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E603-E879-49C4-86FD-31B294876593}|InternshipPortal.Application\\InternshipPortal.Application.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.application\\dtos\\internshipopeningdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0068E603-E879-49C4-86FD-31B294876593}|InternshipPortal.Application\\InternshipPortal.Application.csproj|solutionrelative:internshipportal.application\\dtos\\internshipopeningdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30557174-30B4-4D0B-BFB2-C8B6A90F9EDB}|InternshipPortal.API\\InternshipPortal.API.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.api\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30557174-30B4-4D0B-BFB2-C8B6A90F9EDB}|InternshipPortal.API\\InternshipPortal.API.csproj|solutionrelative:internshipportal.api\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30557174-30B4-4D0B-BFB2-C8B6A90F9EDB}|InternshipPortal.API\\InternshipPortal.API.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.api\\controllers\\internshipopeningscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30557174-30B4-4D0B-BFB2-C8B6A90F9EDB}|InternshipPortal.API\\InternshipPortal.API.csproj|solutionrelative:internshipportal.api\\controllers\\internshipopeningscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404854DD-5755-4C67-A74A-4098E4C7296F}|InternshipPortal.Domain\\InternshipPortal.Domain.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.domain\\entities\\internshipopening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{404854DD-5755-4C67-A74A-4098E4C7296F}|InternshipPortal.Domain\\InternshipPortal.Domain.csproj|solutionrelative:internshipportal.domain\\entities\\internshipopening.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30557174-30B4-4D0B-BFB2-C8B6A90F9EDB}|InternshipPortal.API\\InternshipPortal.API.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.api\\internshipportal.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{30557174-30B4-4D0B-BFB2-C8B6A90F9EDB}|InternshipPortal.API\\InternshipPortal.API.csproj|solutionrelative:internshipportal.api\\internshipportal.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{306AE1B7-0BD1-456C-A1AB-30E7FB0DAC6B}|InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.infrastructure\\internshipportal.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{306AE1B7-0BD1-456C-A1AB-30E7FB0DAC6B}|InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj|solutionrelative:internshipportal.infrastructure\\internshipportal.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0068E603-E879-49C4-86FD-31B294876593}|InternshipPortal.Application\\InternshipPortal.Application.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.application\\internshipportal.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0068E603-E879-49C4-86FD-31B294876593}|InternshipPortal.Application\\InternshipPortal.Application.csproj|solutionrelative:internshipportal.application\\internshipportal.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{404854DD-5755-4C67-A74A-4098E4C7296F}|InternshipPortal.Domain\\InternshipPortal.Domain.csproj|d:\\kasak\\1_sem5_project\\dotnet_ip\\dotnet\\internshipportal\\internshipportal.domain\\internshipportal.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{404854DD-5755-4C67-A74A-4098E4C7296F}|InternshipPortal.Domain\\InternshipPortal.Domain.csproj|solutionrelative:internshipportal.domain\\internshipportal.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "InternshipPortal.API\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "InternshipPortal.API\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T04:30:21.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InternshipOpeningsController.cs",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\Controllers\\InternshipOpeningsController.cs",
+              "RelativeDocumentMoniker": "InternshipPortal.API\\Controllers\\InternshipOpeningsController.cs",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\Controllers\\InternshipOpeningsController.cs",
+              "RelativeToolTip": "InternshipPortal.API\\Controllers\\InternshipOpeningsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T04:42:32.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InternshipOpeningDto.cs",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Application\\DTOs\\InternshipOpeningDto.cs",
+              "RelativeDocumentMoniker": "InternshipPortal.Application\\DTOs\\InternshipOpeningDto.cs",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Application\\DTOs\\InternshipOpeningDto.cs",
+              "RelativeToolTip": "InternshipPortal.Application\\DTOs\\InternshipOpeningDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA+wA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T16:07:43.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InternshipOpening.cs",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Domain\\Entities\\InternshipOpening.cs",
+              "RelativeDocumentMoniker": "InternshipPortal.Domain\\Entities\\InternshipOpening.cs",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Domain\\Entities\\InternshipOpening.cs",
+              "RelativeToolTip": "InternshipPortal.Domain\\Entities\\InternshipOpening.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T16:07:04.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InternshipPortal.Domain.csproj",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Domain\\InternshipPortal.Domain.csproj",
+              "RelativeDocumentMoniker": "InternshipPortal.Domain\\InternshipPortal.Domain.csproj",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Domain\\InternshipPortal.Domain.csproj",
+              "RelativeToolTip": "InternshipPortal.Domain\\InternshipPortal.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T16:02:06.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InternshipPortal.API.csproj",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\InternshipPortal.API.csproj",
+              "RelativeDocumentMoniker": "InternshipPortal.API\\InternshipPortal.API.csproj",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.API\\InternshipPortal.API.csproj",
+              "RelativeToolTip": "InternshipPortal.API\\InternshipPortal.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T15:59:52.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InternshipPortal.Infrastructure.csproj",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj",
+              "RelativeToolTip": "InternshipPortal.Infrastructure\\InternshipPortal.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T15:59:34.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InternshipPortal.Application.csproj",
+              "DocumentMoniker": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Application\\InternshipPortal.Application.csproj",
+              "RelativeDocumentMoniker": "InternshipPortal.Application\\InternshipPortal.Application.csproj",
+              "ToolTip": "D:\\kasak\\1_sem5_project\\DotNet_IP\\dotNET\\InternshipPortal\\InternshipPortal.Application\\InternshipPortal.Application.csproj",
+              "RelativeToolTip": "InternshipPortal.Application\\InternshipPortal.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-09T15:58:50.691Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

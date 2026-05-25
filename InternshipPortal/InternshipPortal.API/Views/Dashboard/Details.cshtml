@@ -1,0 +1,57 @@
+@model InternshipOpeningDto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<section class="detail-card">
+    <div class="section-header">
+        <div>
+            <p class="eyebrow">Internship Details</p>
+            <h1>@Model.Title</h1>
+        </div>
+        <span class="status @(Model.IsActive ? "status-active" : "status-closed")">
+            @(Model.IsActive ? "Active" : "Closed")
+        </span>
+    </div>
+
+    <div class="detail-grid">
+        <div>
+            <h3>Company</h3>
+            <p>@Model.CompanyName</p>
+        </div>
+        <div>
+            <h3>Location</h3>
+            <p>@Model.Location</p>
+        </div>
+        <div>
+            <h3>Duration</h3>
+            <p>@Model.Duration</p>
+        </div>
+        <div>
+            <h3>Stipend</h3>
+            <p>BDT @Model.Stipend</p>
+        </div>
+        <div>
+            <h3>Deadline</h3>
+            <p>@Model.LastDate.ToString("dd MMM yyyy")</p>
+        </div>
+        <div>
+            <h3>Posted On</h3>
+            <p>@Model.CreatedAt.ToString("dd MMM yyyy")</p>
+        </div>
+    </div>
+
+    <div>
+        <h3>Description</h3>
+        <p class="description-box">@Model.Description</p>
+    </div>
+
+    <div class="page-actions">
+        @if (User.IsInRole("Admin") || User.IsInRole("Company"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="button button-primary">Edit</a>
+        }
+        <a asp-action="Index" class="button button-secondary">Back</a>
+    </div>
+</section>

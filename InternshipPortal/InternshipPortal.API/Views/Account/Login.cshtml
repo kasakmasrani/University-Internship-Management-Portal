@@ -1,0 +1,31 @@
+@model InternshipPortal.API.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="auth-shell">
+    <article class="auth-card">
+        <div class="section-header auth-header">
+            <h1>Login</h1>
+            <p>Sign in to continue to the internship portal dashboard.</p>
+        </div>
+
+        <form asp-action="Login" method="post" class="auth-form">
+            @Html.AntiForgeryToken()
+            <input asp-for="ReturnUrl" type="hidden" />
+
+            <div asp-validation-summary="ModelOnly" class="validation-box"></div>
+
+            <label asp-for="Username">Username</label>
+            <input asp-for="Username" autocomplete="username" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" autocomplete="current-password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+            <button type="submit" class="button button-primary">Login</button>
+        </form>
+    </article>
+</section>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Internship Portal</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-content">
+            <a asp-controller="Dashboard" asp-action="Index" class="brand">Internship Portal</a>
+            <nav class="topnav">
+                <a asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                @if (User.Identity?.IsAuthenticated == true && (User.IsInRole("Admin") || User.IsInRole("Company")))
+                {
+                    <a asp-controller="Dashboard" asp-action="Create">Post Internship</a>
+                }
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    var currentRole = User.IsInRole("Admin") ? "Admin"
+                        : User.IsInRole("Company") ? "Company"
+                        : User.IsInRole("Faculty") ? "Faculty"
+                        : User.IsInRole("Student") ? "Student"
+                        : "User";
+                    <span class="topnav-user">Hello, @User.Identity.Name (@currentRole)</span>
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="inline-form">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="button-link">Logout</button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login">Login</a>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-shell">
+        @RenderBody()
+    </main>
+</body>
+</html>
